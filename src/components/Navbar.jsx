@@ -1,15 +1,9 @@
 import React from 'react'
 import {AppBar, Toolbar, Typography} from '@material-ui/core'
 
-const useStyle = makeStyles((theme) => ({
-    offset: {
-      ...theme.mixins.toolbar, // min-height: 56px;
-      marginBottom: "1rem", // margen opcional
-    },
-}));
 
 const Navbar = () => {
-    return(
+    return (
         <div>
             <AppBar>
                 <Toolbar>
