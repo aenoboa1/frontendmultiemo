@@ -1,10 +1,13 @@
 // material-ui
-import { useMediaQuery, Container, Link, Typography, Stack } from '@mui/material';
+import {useMediaQuery, Container, Link, Typography, Stack } from '@mui/material';
+import {useTheme} from "@mui/material/styles";
 
 // ==============================|| FOOTER - AUTHENTICATION ||============================== //
 
 const AuthFooter = () => {
-  const matchDownSM = useMediaQuery((theme) => theme.breakpoints.down('sm'));
+
+  const theme = useTheme();
+  const matchDownSM = useMediaQuery(theme.breakpoints.up('sm'));
 
   return (
     <Container maxWidth="xl">
