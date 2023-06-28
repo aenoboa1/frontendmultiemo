@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom';
 // material-ui
 import {Grid, Stack, Typography} from '@mui/material';
 import AuthWrapper from "../../components/auth/AuthWrapper.jsx";
+import AuthLogin from "./AuthLogin.jsx";
 
 
 // ================================|| LOGIN ||================================ //
@@ -21,6 +22,7 @@ const Login = () => (
                 </Stack>
             </Grid>
             <Grid item xs={12}>
+                <AuthLogin/>
             </Grid>
         </Grid>
     </AuthWrapper>
