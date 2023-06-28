@@ -1,13 +1,12 @@
-import React from 'react'
 import {AppBar, Toolbar, Typography} from '@material-ui/core'
 
 
 const Navbar = () => {
-    return (
+    return(
         <div>
             <AppBar>
                 <Toolbar>
-                    <Typography variant="h6">
+                    <Typography variant='h6'>
                         hola
                     </Typography>
                 </Toolbar>

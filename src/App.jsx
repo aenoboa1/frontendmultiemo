@@ -1,14 +1,13 @@
 import Button from '@material-ui/core/Button'
 import './App.css'
 
-import {ThemeProvider} from '@material-ui/core/styles'
-
 import Navbar from './components/Navbar'
 
 
 function App() {
 
     return (
+          <>
             <Navbar/>
             <Button variant="contained" color="primary">
                 botón
@@ -16,6 +15,7 @@ function App() {
             <Button variant="contained" color="secondary">
                 botón
             </Button>
+          </>
     );
 }
 
