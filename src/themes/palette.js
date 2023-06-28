@@ -5,7 +5,7 @@ import {createTheme} from '@mui/material/styles';
 import {presetPalettes} from '@ant-design/colors';
 
 // project import
-import ThemeOption from './theme/index.js';
+import ThemeOption from './theme/index.jsx';
 
 // ==============================|| DEFAULT THEME - PALETTE  ||============================== //
 

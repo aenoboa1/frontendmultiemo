@@ -46,13 +46,13 @@ const AuthLogin = () => {
         <>
             <Formik
                 initialValues={{
-                    email: 'info@codedthemes.com',
-                    password: '123456',
+                    email: '',
+                    password: '',
                     submit: null
                 }}
                 validationSchema={Yup.object().shape({
-                    email: Yup.string().email('Must be a valid email').max(255).required('Email is required'),
-                    password: Yup.string().max(255).required('Password is required')
+                    email: Yup.string().email('Must be a valid email').max(255).required('Email es requerido'),
+                    password: Yup.string().max(255).required('Contraseña es requerida')
                 })}
                 onSubmit={async (values, {setErrors, setStatus, setSubmitting}) => {
                     try {
@@ -70,7 +70,7 @@ const AuthLogin = () => {
                         <Grid container spacing={3}>
                             <Grid item xs={12}>
                                 <Stack spacing={1}>
-                                    <InputLabel htmlFor="email-login">Email Address</InputLabel>
+                                    <InputLabel htmlFor="email-login">Correo electronico</InputLabel>
                                     <OutlinedInput
                                         id="email-login"
                                         type="email"
@@ -78,7 +78,7 @@ const AuthLogin = () => {
                                         name="email"
                                         onBlur={handleBlur}
                                         onChange={handleChange}
-                                        placeholder="Enter email address"
+                                        placeholder="Introduzca el correo electrónico"
                                         fullWidth
                                         error={Boolean(touched.email && errors.email)}
                                     />
@@ -91,7 +91,7 @@ const AuthLogin = () => {
                             </Grid>
                             <Grid item xs={12}>
                                 <Stack spacing={1}>
-                                    <InputLabel htmlFor="password-login">Password</InputLabel>
+                                    <InputLabel htmlFor="password-login">Contraseña</InputLabel>
                                     <OutlinedInput
                                         fullWidth
                                         error={Boolean(touched.password && errors.password)}
@@ -114,7 +114,7 @@ const AuthLogin = () => {
                                                 </IconButton>
                                             </InputAdornment>
                                         }
-                                        placeholder="Enter password"
+                                        placeholder="Introduzca la contraseña"
                                     />
                                     {touched.password && errors.password && (
                                         <FormHelperText error id="standard-weight-helper-text-password-login">
@@ -136,10 +136,10 @@ const AuthLogin = () => {
                                                 size="small"
                                             />
                                         }
-                                        label={<Typography variant="h6">Keep me sign in</Typography>}
+                                        label={<Typography variant="h6">Mantener sesión iniciada</Typography>}
                                     />
-                                    <Link variant="h6" component={RouterLink} to="" color="text.primary">
-                                        Forgot Password?
+                                    <Link variant="h6" c omponent={RouterLink} to="" color="text.primary">
+                                        Olvido su contraseña?
                                     </Link>
                                 </Stack>
                             </Grid>
@@ -152,13 +152,13 @@ const AuthLogin = () => {
                                 <AnimateButton>
                                     <Button disableElevation disabled={isSubmitting} fullWidth size="large"
                                             type="submit" variant="contained" color="primary">
-                                        Login
+                                        Iniciar Sesión
                                     </Button>
                                 </AnimateButton>
                             </Grid>
                             <Grid item xs={12}>
                                 <Divider>
-                                    <Typography variant="caption"> Login with</Typography>
+                                    <Typography variant="caption"> Iniciar Sesión con:</Typography>
                                 </Divider>
                             </Grid>
                             <Grid item xs={12}>
