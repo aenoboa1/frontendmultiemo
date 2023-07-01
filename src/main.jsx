@@ -5,6 +5,7 @@ import {createBrowserRouter, RouterProvider} from "react-router-dom";
 import Login from "./pages/authentication/Login.jsx";
 import ThemeCustomization from "./themes/index.jsx";
 import {Register} from "./pages/authentication/Register.jsx";
+import DashboardDefault from "./pages/dashboard/index.jsx";
 
 const router = createBrowserRouter([
     {
@@ -15,6 +16,10 @@ const router = createBrowserRouter([
         path: "/register",
         element: <Register/>
     },
+    {
+        path: '/dashboard',
+        element: <DashboardDefault/>
+    }
 ]);
 
 // Main react DOM render
