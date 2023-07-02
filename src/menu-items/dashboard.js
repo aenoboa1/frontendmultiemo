@@ -1,27 +1,28 @@
 // assets
-import { DashboardOutlined } from '@ant-design/icons';
+import {CameraOutlined, DashboardOutlined} from '@ant-design/icons';
 
 // icons
 const icons = {
-  DashboardOutlined
+    DashboardOutlined,
+    CameraOutlined
 };
 
 // ==============================|| MENU ITEMS - DASHBOARD ||============================== //
 
 const dashboard = {
-  id: 'group-dashboard',
-  title: 'Navigation',
-  type: 'group',
-  children: [
-    {
-      id: 'dashboard',
-      title: 'Dashboard',
-      type: 'item',
-      url: '/dashboard/default',
-      icon: icons.DashboardOutlined,
-      breadcrumbs: false
-    }
-  ]
+    id: 'group-dashboard',
+    title: 'Reconocimiento en Tiempo Real',
+    type: 'group',
+    children: [
+        {
+            id: 'live',
+            title: 'Live',
+            type: 'item',
+            url: '/live/default',
+            icon: icons.CameraOutlined,
+            breadcrumbs: false
+        }
+    ]
 };
 
 export default dashboard;

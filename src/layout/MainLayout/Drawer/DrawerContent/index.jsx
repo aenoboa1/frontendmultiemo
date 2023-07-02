@@ -1,5 +1,4 @@
 // project import
-import NavCard from './NavCard.jsx';
 import Navigation from './Navigation/index.jsx';
 
 import SimpleBar from '../../../../../src/components/third-party/SimpleBar.jsx'
@@ -15,7 +14,6 @@ const DrawerContent = () => (
         }}
     >
         <Navigation/>
-        <NavCard/>
     </SimpleBar>
 );
 
