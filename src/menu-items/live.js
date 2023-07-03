@@ -9,8 +9,8 @@ const icons = {
 
 // ==============================|| MENU ITEMS - DASHBOARD ||============================== //
 
-const dashboard = {
-    id: 'group-dashboard',
+const live = {
+    id: 'group-live',
     title: 'Reconocimiento en Tiempo Real',
     type: 'group',
     children: [
@@ -25,4 +25,4 @@ const dashboard = {
     ]
 };
 
-export default dashboard;
+export default live;

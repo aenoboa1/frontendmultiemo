@@ -25,8 +25,8 @@ import ProfileTab from './ProfileTab.jsx';
 import SettingTab from './SettingTab.jsx';
 
 // assets
-import avatar1 from '../../../../../assets/users/avatar-1.png';
 import {LogoutOutlined, SettingOutlined, UserOutlined} from '@ant-design/icons';
+import Transitions from "../../../../../components/@extended/Transitions.jsx";
 
 // tab panel wrapper
 function TabPanel({children, value, index, ...other}) {
@@ -81,6 +81,35 @@ const Profile = () => {
 
     const iconBackColorOpen = 'grey.300';
 
+    function stringAvatar(name) {
+        return {
+            sx: {
+                bgcolor: stringToColor(name),
+            },
+            children: `${name.split(' ')[0][0]}${name.split(' ')[1][0]}`,
+        };
+    }
+
+    function stringToColor(string) {
+        let hash = 0;
+        let i;
+
+        /* eslint-disable no-bitwise */
+        for (i = 0; i < string.length; i += 1) {
+            hash = string.charCodeAt(i) + ((hash << 5) - hash);
+        }
+
+        let color = '#';
+
+        for (i = 0; i < 3; i += 1) {
+            const value = (hash >> (i * 8)) & 0xff;
+            color += `00${value.toString(16)}`.slice(-2);
+        }
+        /* eslint-enable no-bitwise */
+
+        return color;
+    }
+
     return (
         <Box sx={{flexShrink: 0, ml: 0.75}}>
             <ButtonBase
@@ -97,8 +126,8 @@ const Profile = () => {
                 onClick={handleToggle}
             >
                 <Stack direction="row" spacing={2} alignItems="center" sx={{p: 0.5}}>
-                    <Avatar alt="profile user" src={avatar1} sx={{width: 32, height: 32}}/>
-                    <Typography variant="subtitle1">John Doe</Typography>
+                    <Avatar alt="profile user" {...stringAvatar('Andres Noboa')} src={""} sx={{width: 32, height: 32}}/>
+                    <Typography variant="subtitle1">Andres Noboa</Typography>
                 </Stack>
             </ButtonBase>
             <Popper
@@ -139,12 +168,12 @@ const Profile = () => {
                                             <Grid container justifyContent="space-between" alignItems="center">
                                                 <Grid item>
                                                     <Stack direction="row" spacing={1.25} alignItems="center">
-                                                        <Avatar alt="profile user" src={avatar1}
-                                                                sx={{width: 32, height: 32}}/>
+                                                        <Avatar alt="profile user" {...stringAvatar('Andres Noboa')}
+                                                                src={""} sx={{width: 32, height: 32}}/>
                                                         <Stack>
-                                                            <Typography variant="h6">John Doe</Typography>
+                                                            <Typography variant="h6">Andres Noboa</Typography>
                                                             <Typography variant="body2" color="textSecondary">
-                                                                UI/UX Designer
+                                                                Administrador
                                                             </Typography>
                                                         </Stack>
                                                     </Stack>

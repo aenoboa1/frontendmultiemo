@@ -19,7 +19,7 @@ const support = {
             id: 'sample-page',
             title: 'Configuración',
             type: 'item',
-            url: '/sample-page',
+            url: '/config',
             icon: icons.SettingFilled,
         },
     ]

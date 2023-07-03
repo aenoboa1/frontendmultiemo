@@ -10,6 +10,9 @@ import MinimalLayout from "./layout/MinimalLayout/index.jsx";
 import MainLayout from "./layout/MainLayout/index.jsx";
 import {Provider} from "react-redux";
 import {store} from "./store/index.js";
+import Upload from "./pages/upload/index.jsx";
+import Live from "./pages/live/index.jsx";
+import ConfigDefault from "./pages/config/index.jsx";
 
 const router = createBrowserRouter([
     {
@@ -17,8 +20,23 @@ const router = createBrowserRouter([
         element: <MainLayout/>,
         children: [
             {
-                path: '/dashboard',
+                path: '/dashboard/default',
                 element: <DashboardDefault/>
+            },
+            {
+
+                path: "/upload/default",
+                element: <Upload/>
+            },
+            {
+
+                path: "/live/default",
+                element: <Live/>
+            },
+            {
+
+                path: "/config",
+                element: <ConfigDefault/>
             }
         ]
     },

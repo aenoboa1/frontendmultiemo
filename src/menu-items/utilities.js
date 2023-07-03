@@ -1,21 +1,10 @@
 // assets
-import {
-  AntDesignOutlined,
-  AppstoreAddOutlined,
-  BarcodeOutlined,
-  BgColorsOutlined,
-  FontSizeOutlined,
-  LoadingOutlined
-} from '@ant-design/icons';
+import {DashboardOutlined, UploadOutlined} from '@ant-design/icons';
 
 // icons
 const icons = {
-    FontSizeOutlined,
-    BgColorsOutlined,
-    BarcodeOutlined,
-    AntDesignOutlined,
-    LoadingOutlined,
-    AppstoreAddOutlined
+    DashboardOutlined,
+    UploadOutlined
 };
 
 // ==============================|| MENU ITEMS - UTILITIES ||============================== //
@@ -25,13 +14,20 @@ const utilities = {
     title: 'Dashboard',
     type: 'group',
     children: [
-
         {
             id: 'dashboard',
             title: 'Dashboard',
             type: 'item',
             url: '/dashboard/default',
             icon: icons.DashboardOutlined,
+            breadcrumbs: false
+        },
+        {
+            id: 'upload',
+            title: 'Cargar Video',
+            type: 'item',
+            url: '/upload/default',
+            icon: icons.UploadOutlined,
             breadcrumbs: false
         }
     ]
