@@ -26,15 +26,15 @@ const Theme = (colors) => {
     return {
         primary: {
             lighter: purple[0],
-            100: blue[1],
-            200: blue[2],
-            light: blue[3],
-            400: blue[4],
+            100: purple[1],
+            200: purple[2],
+            light: purple[3],
+            400: purple[4],
             main: purple[5],
-            dark: blue[6],
-            700: blue[7],
-            darker: blue[8],
-            900: blue[9],
+            dark: purple[6],
+            700: purple[7],
+            darker: purple[8],
+            900: purple[9],
             contrastText
         },
         secondary: {

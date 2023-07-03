@@ -1,18 +1,20 @@
-import React from 'react'
+import React, {lazy} from 'react'
 import ReactDOM from 'react-dom/client'
-import './index.css'
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
 import Login from "./pages/authentication/Login.jsx";
 import ThemeCustomization from "./themes/index.jsx";
 import {Register} from "./pages/authentication/Register.jsx";
-import DashboardDefault from "./pages/dashboard/index.jsx";
 import MinimalLayout from "./layout/MinimalLayout/index.jsx";
 import MainLayout from "./layout/MainLayout/index.jsx";
 import {Provider} from "react-redux";
 import {store} from "./store/index.js";
-import Upload from "./pages/upload/index.jsx";
-import Live from "./pages/live/index.jsx";
-import ConfigDefault from "./pages/config/index.jsx";
+import Loadable from "./components/Loadable.jsx";
+
+// render - utilities
+const DashboardDefault = Loadable(lazy(() => import('./pages/dashboard/index.jsx')));
+const Upload = Loadable(lazy(() => import('./pages/upload/index.jsx')));
+const Live = Loadable(lazy(() => import('./pages/live/index.jsx')));
+const ConfigDefault = Loadable(lazy(() => import('./pages/config/index.jsx')));
 
 const router = createBrowserRouter([
     {

@@ -1,16 +1,20 @@
 // material-ui
-import {Grid} from '@mui/material';
+import MainCard from "../../components/MainCard.jsx";
+import {VideoPreview} from "./VideoPreview.jsx";
 
 
 // ==============================|| DASHBOARD - DEFAULT ||============================== //
 
-const DashboardDefault = () => {
+const UploadDefault = () => {
 
     return (
-        <Grid container rowSpacing={4.5} columnSpacing={2.75}>
 
-        </Grid>
+        <MainCard>
+            <VideoPreview/>
+        </MainCard>
+
+
     );
 };
 
-export default DashboardDefault;
+export default UploadDefault;

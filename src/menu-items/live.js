@@ -20,7 +20,6 @@ const live = {
             type: 'item',
             url: '/live/default',
             icon: icons.CameraOutlined,
-            breadcrumbs: false
         }
     ]
 };

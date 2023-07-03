@@ -28,7 +28,6 @@ const utilities = {
             type: 'item',
             url: '/upload/default',
             icon: icons.UploadOutlined,
-            breadcrumbs: false
         }
     ]
 };

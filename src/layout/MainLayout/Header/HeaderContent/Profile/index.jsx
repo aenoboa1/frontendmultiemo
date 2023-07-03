@@ -200,7 +200,7 @@ const Profile = () => {
                                                             }}
                                                             icon={<UserOutlined
                                                                 style={{marginBottom: 0, marginRight: '10px'}}/>}
-                                                            label="Profile"
+                                                            label="Perfil"
                                                             {...a11yProps(0)}
                                                         />
                                                         <Tab
@@ -213,7 +213,7 @@ const Profile = () => {
                                                             }}
                                                             icon={<SettingOutlined
                                                                 style={{marginBottom: 0, marginRight: '10px'}}/>}
-                                                            label="Setting"
+                                                            label="Opciones"
                                                             {...a11yProps(1)}
                                                         />
                                                     </Tabs>
