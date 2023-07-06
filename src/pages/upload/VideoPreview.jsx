@@ -15,18 +15,6 @@ export const VideoPreview = () => {
     }
 
 
-    const handleSnackbar = () => {
-        setOpen(true);
-    };
-
-    const handleClose = (event, reason) => {
-        if (reason === 'clickaway') {
-            return;
-        }
-
-        setOpen(false);
-    };
-
     function previewFile(e) {
         // Reading New File (open file Picker Box)
         const reader = new FileReader();
@@ -59,7 +47,6 @@ export const VideoPreview = () => {
                 container
                 justifyContent="center"
                 alignItems="center"
-                sx={{minWidth: {xs: '400px', md: 'calc(100vh - 112px)'}}}
             >
                 <input ref={filePicekerRef} accept="video/*" onChange={previewFile} type="file" hidden/>
                 <Button variant="contained" shape="rounded" aria-label="Subir Video"
