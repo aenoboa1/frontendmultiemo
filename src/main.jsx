@@ -4,7 +4,7 @@ import {createBrowserRouter, RouterProvider} from "react-router-dom";
 import Login from "./pages/authentication/Login.jsx";
 import ThemeCustomization from "./themes/index.jsx";
 import {Register} from "./pages/authentication/Register.jsx";
-import MinimalLayout from "./layout/MinimalLayout/index.jsx";
+import MinimalLayout from "../../customer-react/src/layout/loginLayout/index.jsx";
 import MainLayout from "./layout/MainLayout/index.jsx";
 import {Provider} from "react-redux";
 import {store} from "./store/index.js";
